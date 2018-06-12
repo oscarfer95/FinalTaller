@@ -5,13 +5,11 @@ delete from city;
 
 delete from User;
 
-
 INSERT INTO category(id, nombre) VALUES (100, 'Pizza');
 INSERT INTO category(id, nombre) VALUES (101, 'Comida Rapida');
 INSERT INTO category(id, nombre) VALUES (102, 'Heladeria');
 INSERT INTO category(id, nombre) VALUES (103, 'Comidas exóticas');
 INSERT INTO category(id, nombre) VALUES (104, 'Pastas');
-
 
 INSERT INTO city(id, nombre) VALUES (50,'Cochabamba');
 INSERT INTO city(id, nombre) VALUES (51,'La Paz');
@@ -22,7 +20,6 @@ INSERT INTO city(id, nombre) VALUES (55,'Pando');
 INSERT INTO city(id, nombre) VALUES (56,'Tarija');
 INSERT INTO city(id, nombre) VALUES (57,'Beni');
 INSERT INTO city(id, nombre) VALUES (58,'Potosi');
-
 
 INSERT INTO restaurant(id, name,phone,description,likes,category_id,city_id, latitude, longitud) VALUES (50,'Elis',4785698,'Muy bueno',0,100,50, -17.373320, -66.152807);
 INSERT INTO restaurant(id, name,phone,description,likes,category_id,city_id, latitude, longitud) VALUES (51,'Burger king',4569823,'Muy bueno igualmente',0,101,50,-17.383354, -66.159636);
