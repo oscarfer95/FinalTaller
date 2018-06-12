@@ -42,3 +42,7 @@ INSERT INTO user (id,admin,name,last_name,password,username,city_id) VALUES (1,1
 INSERT INTO user (id,admin,name,last_name,password,username,city_id) VALUES (2,0,'ElHonrado','Juan','$2a$10$QVUYllnp1PMD4aQN/TDese/L78dN0ABWhnolJl0xmMtmTt.7ajx72','aa',57);
 INSERT INTO user (id,admin,name,last_name,password,username,city_id) VALUES (3,0,'Juan','Solo','$2a$10$QVUYllnp1PMD4aQN/TDese/L78dN0ABWhnolJl0xmMtmTt.7ajx72','aaa',50);
 
+INSERT INTO userProfile (id,name,commentCount) VALUES (1,"Pasivo",0);
+INSERT INTO userProfile (id,name,commentCount) VALUES (2,"Activo",1);
+INSERT INTO userProfile (id,name,commentCount) VALUES (3,"Comentador",5);
+INSERT INTO userProfile (id,name,commentCount) VALUES (4,"GranComentador",100);

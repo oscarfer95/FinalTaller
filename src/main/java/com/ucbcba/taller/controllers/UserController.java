@@ -6,7 +6,9 @@ import com.sun.org.apache.xpath.internal.operations.Mod;
 import com.ucbcba.taller.entities.City;
 import com.ucbcba.taller.entities.Restaurant;
 import com.ucbcba.taller.entities.User;
+import com.ucbcba.taller.entities.UserProfile;
 import com.ucbcba.taller.services.CityService;
+import com.ucbcba.taller.services.UserProfileService;
 import com.ucbcba.taller.services.SecurityService;
 import com.ucbcba.taller.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,14 +35,20 @@ public class UserController {
     @Autowired
     private CityService cityService;
 
-    //@Autowired
-    //private UserValidator userValidator;
+    //anadiendo userProfileService
+    @Autowired
+    private UserProfileService userProfileService;
 
     @RequestMapping(value = "/registration", method = RequestMethod.GET)
     public String registrationInit(Model model) {
         model.addAttribute("user", new User());
         Iterable<City> cityList = cityService.listAllCities();
         model.addAttribute("cities", cityList);
+
+        //mandando la lista de userProfiles
+        Iterable<UserProfile> userPlist = userProfileService.listAllUsersProfiles();
+        model.addAttribute("userPs", userPlist);
+
         return "registration";
     }
 
@@ -116,6 +124,11 @@ public class UserController {
         Iterable<City> cityList = cityService.listAllCities();
         model.addAttribute("cities", cityList);
         model.addAttribute("user", user);
+
+        //Mandar lista de userProfiles a editUser
+        Iterable<UserProfile> userPlist = userProfileService.listAllUsersProfiles();
+        model.addAttribute("userPs", userPlist);
+
         return "editUser";
     }
 

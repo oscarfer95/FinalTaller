@@ -1,12 +1,10 @@
 package com.ucbcba.taller.services;
 
-
 import com.ucbcba.taller.entities.Comment;
 import com.ucbcba.taller.repositories.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-
 
 @Service
 public class CommentServiceImpl implements CommentService {

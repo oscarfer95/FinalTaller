@@ -34,6 +34,10 @@ public class User {
     @JoinColumn(name="city_id")
     private City city;
 
+    @ManyToOne
+    @JoinColumn(name="userProfile_id")
+    private UserProfile userProfile;
+
     public Long getId() {
         return id;
     }
@@ -118,5 +122,13 @@ public class User {
 
     public void setCity(City city) {
         this.city = city;
+    }
+
+    public UserProfile getUserProfile() {
+        return userProfile;
+    }
+
+    public void setUserProfile(UserProfile userProfile) {
+        this.userProfile = userProfile;
     }
 }

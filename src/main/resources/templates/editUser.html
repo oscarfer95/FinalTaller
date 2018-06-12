@@ -194,11 +194,15 @@ h2{
                         th:text="${city.nombre}"
                         th:selected="(${city.id} == ${user.city.id})"></option>
             </select>
-            <!--<p>IGRESE USERNAME:</p>-->
-            <!--<textarea name="username" th:text="${user.username}" id="username" class="text" cols="30" rows="5">-->
-             <!--</textarea>-->
-            <!--<br/>-->
 
+            <!--Select para elegir perfil-->
+            <p>INGRESE PERFIL:</p>
+            <select name="userP" class="select">
+                <option th:each="UserP : ${userPs}"
+                        th:value="${UserP.id}"
+                        th:text="${UserP.nombre}"
+                        th:selected="(${UserP.id} == ${UserP.name})"></option>
+            </select>
 
             <br/>
             <br/>
